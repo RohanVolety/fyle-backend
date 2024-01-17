@@ -312,4 +312,4 @@ docker-compose build
 docker-compose up
 
 ```
-open ``http://localhost:7755/`` to view the application
+open ``http://localhost:7755`` to view the application
