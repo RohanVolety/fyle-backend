@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    ports:
+      - "7755:7755"
+    environment:
+      FLASK_APP: core/server.py
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: Your_password
+      MYSQL_DATABASE: your_database_name
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
